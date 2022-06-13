@@ -1,0 +1,20 @@
+// Logo in header
+.navigation__company-name {
+    color: var(--accent);
+font-family: 'Raleway';
+font-weight: 700;
+font-size: 26px;
+line-height: 1.2;
+letter-spacing: 0.03em;
+text-decoration: none;
+margin-right: 93px;
+&--black {
+    color: #000000;
+}
+// Logo in footer
+&--white {
+    color: #FFFFFF;
+}
+}
+
+

@@ -1,0 +1,32 @@
+/* Clients section styles */
+.clients__list {
+display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.clients__list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #AFB1B8;
+border-radius: 4px;
+width: 170px;
+height: 92px;
+
+&:hover,
+&:focus {
+    border-color: var(--accent);
+}
+
+&:hover .clients__list-icon,
+&:focus .clients__list-icon{
+    fill: var(--accent);
+}
+}
+.clients__list-item:not(:last-child) {
+    margin-right: 30px;
+}
+.clients__list-icon {
+    fill: #AFB1B8;
+    transition: fill 250ms var(--cubic);
+}
