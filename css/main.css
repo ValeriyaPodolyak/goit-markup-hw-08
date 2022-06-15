@@ -53,6 +53,14 @@ body {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 1199.98px) {
+  .heading {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
@@ -893,14 +901,6 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: #F5F4FA;
 }
 
-@media screen and (max-width: 1199.98px) {
-  .member-container__heading {
-    margin-bottom: 30px;
-    font-size: 28px;
-    line-height: 33px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .member__list {
     display: -webkit-box;
@@ -1000,6 +1000,40 @@ h1, h2, h3, h4, h5, h6, p {
           justify-content: center;
 }
 
+@media screen and (max-width: 1199.98px) {
+  .clients__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .clients__list-item:nth-child(2n+1) {
+    margin-right: 30px;
+  }
+  .clients__list-item:nth-child(-n+4) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .clients__list-item {
+    margin-right: 30px;
+  }
+  .clients__list-item:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+  .clients__list-item:nth-child(-n+3) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
 .clients__list-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1012,8 +1046,25 @@ h1, h2, h3, h4, h5, h6, p {
           justify-content: center;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-  width: 170px;
   height: 92px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .clients__list-link {
+    width: 210px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .clients__list-link {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__list-link {
+    width: 170px;
+  }
 }
 
 .clients__list-link:hover, .clients__list-link:focus {
@@ -1023,10 +1074,6 @@ h1, h2, h3, h4, h5, h6, p {
 .clients__list-link:hover .clients__list-icon,
 .clients__list-link:focus .clients__list-icon {
   fill: var(--accent);
-}
-
-.clients__list-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .clients__list-icon {

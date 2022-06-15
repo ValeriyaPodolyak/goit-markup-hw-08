@@ -22,5 +22,11 @@ text-align: center;
 letter-spacing: 0.03em;
 color: #212121;
 margin-bottom: 50px;
+
+@include mq(not-desktop) {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 33px;
+}
 }
 

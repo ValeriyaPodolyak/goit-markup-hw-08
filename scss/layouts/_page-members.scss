@@ -2,13 +2,6 @@
 .member {
     background-color: #F5F4FA;
 }
-.member-container__heading {
-@include mq(not-desktop) {
-    margin-bottom: 30px;
-    font-size: 28px;
-    line-height: 33px;
-}
-}
 .member__list {
 @include mq(tablet) {
     display: flex;
