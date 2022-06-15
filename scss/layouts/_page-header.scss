@@ -56,9 +56,15 @@ left: 0;
 }
 /* Contact list style */
 .contacts {
+        @include mq(tablet-only) {
+margin-left: 59px;
+        }
+
+    @include mq(desktop) {
     margin-left: auto;
     display: flex;
     align-items: center;  
+    }
 }
 .contacts__link {
     font-family: inherit;
