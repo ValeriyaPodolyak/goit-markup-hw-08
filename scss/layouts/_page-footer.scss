@@ -23,7 +23,17 @@ justify-content: center;
     justify-content:flex-start; 
 }
 }
+
+
 .ftr-list__item {
+    @include mq(mobile-only) {
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+    }
+@include mq(not-desktop) {
+    text-align: center;
+}
 @include mq(tablet-only) {
 &:first-child {
 margin-right: 165px;
@@ -36,10 +46,14 @@ margin-right: 165px;
 }
 }
 }
+
+.ftr-list__item .navigation__company-name{
+    margin: 0;
+}
 .address {
-    @include mq(tablet-only) {
-        justify-content: center;
-        text-align: center;
+  @include mq(tablet-only) {
+margin-bottom: 60px;  
+}
 }
 .adrs {
     color: #FFFFFF;
@@ -50,6 +64,7 @@ line-height: 1.7;
 letter-spacing: 0.03em;
 margin-top: 20px;
 }
+
 .link.adrs-link {
 font-family: inherit;
 font-style: normal;
@@ -72,7 +87,9 @@ transition: color 250ms var(--cubic);
 
 /* Subscription form styles */
 .ftr-subscription {
+    @include mq(desktop) {
     margin-left: 93px;
+    }
 }
 .ftr-subscription__caption {
     display: inline-block;
@@ -88,16 +105,28 @@ margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+      @include mq(not-desktop) {
+display: block;    
+}
 }
 .ftr-subscription__form-input {
-    width: 358px;
-height: 50px;
-padding: 15px 295px 15px 16px;
+    height: 50px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
 transition: border 250ms var(--cubic);
+
+ @include mq(not-desktop) {
+width: 450px;
+padding: 15px 387px 15px 15px;
+margin-bottom: 20px;
+}
+
+@include mq(desktop) {
+    width: 358px;
+    padding: 15px 295px 15px 16px;
+}
 
 &:hover,
 &:focus {
@@ -113,5 +142,10 @@ align-items: center;
 letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
 }
+}
+.ftr-subscription__form-btn {
+    @include mq(not-desktop) {
+margin-right: auto;
+margin-left: auto;
 }
 }

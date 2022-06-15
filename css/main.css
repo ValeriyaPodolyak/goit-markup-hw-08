@@ -1138,6 +1138,18 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
+@media screen and (max-width: 767.98px) {
+  .ftr-list__item:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .ftr-list__item {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .ftr-list__item:first-child {
     margin-right: 165px;
@@ -1150,20 +1162,17 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-.address {
-  /* Subscription form styles */
+.ftr-list__item .navigation__company-name {
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .address {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
+    margin-bottom: 60px;
   }
 }
 
-.address .adrs {
+.adrs {
   color: #FFFFFF;
   font-family: 'Roboto';
   font-style: normal;
@@ -1173,7 +1182,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 20px;
 }
 
-.address .link.adrs-link {
+.link.adrs-link {
   font-family: inherit;
   font-style: normal;
   font-size: 14px;
@@ -1184,20 +1193,23 @@ h1, h2, h3, h4, h5, h6, p {
   transition: color 250ms var(--cubic);
 }
 
-.address .link.adrs-link:hover, .address .link.adrs-link:focus {
+.link.adrs-link:hover, .link.adrs-link:focus {
   color: #2196F3;
 }
 
-.address .adrs-link {
+.adrs-link {
   display: inline-block;
   margin-top: 9px;
 }
 
-.address .ftr-subscription {
-  margin-left: 93px;
+/* Subscription form styles */
+@media screen and (min-width: 1200px) {
+  .ftr-subscription {
+    margin-left: 93px;
+  }
 }
 
-.address .ftr-subscription__caption {
+.ftr-subscription__caption {
   display: inline-block;
   font-weight: 700;
   font-size: 14px;
@@ -1208,7 +1220,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 20px;
 }
 
-.address .ftr-subscription__form {
+.ftr-subscription__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1220,10 +1232,14 @@ h1, h2, h3, h4, h5, h6, p {
           justify-content: center;
 }
 
-.address .ftr-subscription__form-input {
-  width: 358px;
+@media screen and (max-width: 1199.98px) {
+  .ftr-subscription__form {
+    display: block;
+  }
+}
+
+.ftr-subscription__form-input {
   height: 50px;
-  padding: 15px 295px 15px 16px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1233,11 +1249,26 @@ h1, h2, h3, h4, h5, h6, p {
   transition: border 250ms var(--cubic);
 }
 
-.address .ftr-subscription__form-input:hover, .address .ftr-subscription__form-input:focus {
+@media screen and (max-width: 1199.98px) {
+  .ftr-subscription__form-input {
+    width: 450px;
+    padding: 15px 387px 15px 15px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ftr-subscription__form-input {
+    width: 358px;
+    padding: 15px 295px 15px 16px;
+  }
+}
+
+.ftr-subscription__form-input:hover, .ftr-subscription__form-input:focus {
   border: 1px solid var(--accent);
 }
 
-.address .ftr-subscription__form-input::-webkit-input-placeholder {
+.ftr-subscription__form-input::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -1249,7 +1280,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.address .ftr-subscription__form-input:-ms-input-placeholder {
+.ftr-subscription__form-input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -1261,7 +1292,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.address .ftr-subscription__form-input::-ms-input-placeholder {
+.ftr-subscription__form-input::-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -1273,7 +1304,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.address .ftr-subscription__form-input::placeholder {
+.ftr-subscription__form-input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -1285,6 +1316,13 @@ h1, h2, h3, h4, h5, h6, p {
           align-items: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1199.98px) {
+  .ftr-subscription__form-btn {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /* portfolio styles */
