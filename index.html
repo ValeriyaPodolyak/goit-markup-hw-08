@@ -21,6 +21,16 @@
      <div class="container hdr__container">
         <nav class="navigation">
         <a class="navigation__company-name" href="/">Web<span class="navigation__company-name--black">Studio </span></a>
+        <button type="button" class="mobile-menu__button is-open" aria-expanded="false" data-menu-button>
+          <svg 
+          width="40px" 
+          height="40px"
+          aria-label="Переключатель мобильного меню"
+          aria-controls="mobile-menu">
+          <use class="icon-cross" href="./images/sprite.svg#icon-close-modal-black"></use>
+          <use class="icon-menu" href="./images/sprite.svg#icon-mobile_menu_3_lines"></use>
+          </svg>
+        </button>
         <ul class="list navigation__list">
           <li class="navigation__item">
             <a class="link navigation__link" href="./index.html">  <span class="navigation__link--current">Студия</span> </a>
@@ -533,13 +543,13 @@
               </div>
             </div> -->
      <!-- Mobile menu -->
-            <div class="mobile-menu">
-              <button class="mobile-menu__button" type="button" data-modal-close> 
+            <div class="mobile-menu is-open" id="mobile-menu" data-menu>
+              <!-- <button class="mobile-menu__button" type="button" data-modal-close> 
   <svg class="mobile-menu__button-icon" width="19" height="19">
                       <use href="./images/sprite.svg#icon-close-modal-black">
                       </use>
                     </svg>
-</button>
+</button> -->
        <ul class="list mobile-menu__nav">
          <li class="mobile-menu__nav-item"><a href="./index.html" class="mobile-menu__nav-link link" target="_blank" rel="noopener noreferrer">Студия</a></li>
          <li class="mobile-menu__nav-item"><a href="./portfolio.html" class="mobile-menu__nav-link link" target="_blank" rel="noopener noreferrer">Портфолио</a></li>
@@ -557,5 +567,6 @@
        </ul>
      </div>
             <script src="./js/modal.js"></script>
+            <script src="./js/menu.js"></script>
   </body>
 </html>

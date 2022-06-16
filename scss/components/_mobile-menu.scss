@@ -1,6 +1,7 @@
 // Mobile menu styles (only for mobile version)
 .mobile-menu {
-    position: fixed;
+    display: none;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -9,6 +10,9 @@
     flex-direction: column;
 background-color: var(--white-color);
 padding: 48px 84px 48px 40px;
+&.is-open {
+    display: block;
+}
 }
 .mobile-menu__contacts {
     margin-top: auto;
@@ -77,29 +81,29 @@ padding-right: 10px;
 
 
 // Mobile button styles
-.mobile-menu__button {
-cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: var(--white-color);
-    width: 40px;
-height: 40px;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 0;
-border: none;
+// .mobile-menu__button {
+// cursor: pointer;
+//     position: absolute;
+//     top: 10px;
+//     right: 10px;
+//     background-color: var(--white-color);
+//     width: 40px;
+// height: 40px;
+// display: flex;
+// align-items: center;
+// justify-content: center;
+// padding: 0;
+// border: none;
 
-&:hover .mobile-menu__button-icon,
-&:focus .mobile-menu__button-icon {
-    fill: #2196F3;
-}
-}
+// &:hover .mobile-menu__button-icon,
+// &:focus .mobile-menu__button-icon {
+//     fill: #2196F3;
+// }
+// }
 
-.mobile-menu__button-icon {
-    fill: var(--black-color);
-    transition: fill 250ms var(--cubic);
-}
+// .mobile-menu__button-icon {
+//     fill: var(--black-color);
+//     transition: fill 250ms var(--cubic);
+// }
 
 

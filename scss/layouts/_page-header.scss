@@ -2,6 +2,7 @@
 .hdr {
 background-color: var(--white-color);
 border-bottom: 1px solid #ECECEC;
+position: relative;
 }
 .hdr__container {
     display: flex;
@@ -110,4 +111,21 @@ line-height: 1.1;
         width: 14px;
         height: 10px;
     }
+}
+// Menu button
+.mobile-menu__button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+.mobile-menu__button .icon-cross {
+    display: none;
+}
+.mobile-menu__button.is-open .icon-cross {
+    display: block;
+}
+.mobile-menu__button.is-open .icon-menu {
+    display: none;
 }
