@@ -57,7 +57,9 @@ left: 0;
 /* Contact list style */
 .contacts {
         @include mq(tablet-only) {
-margin-left: 59px;
+margin-left: 84px;
+margin-top: 21px;
+
         }
 
     @include mq(desktop) {
@@ -70,24 +72,42 @@ margin-left: 59px;
     font-family: inherit;
    color: #757575; 
 font-weight: 500;
-font-size: 14px;
-line-height: 1.1;
 letter-spacing: 0.02em;
-padding-top: 32px;
-    padding-bottom: 32px;
     display: flex;
     align-items: center;
     transition: color 250ms var(--cubic);
 
-&:hover,
+    &:hover,
 &:focus {
    color: var(--accent); 
 }
+
+    @include mq(tablet-only) {
+font-size: 12px;
+line-height: 14px;
+&:first-child {
+margin-bottom: 10px;
+}
+}
+
+    @include mq(desktop) {
+font-size: 14px;
+line-height: 1.1;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    }
 }
 .contacts__mail {
+       @include mq(desktop) { 
     margin-right: 50px;
+       }
 }
 .contacts__icons {
     fill: currentColor;
     margin-right: 10px;
+
+    @include mq(tablet-only) {
+        width: 14px;
+        height: 10px;
+    }
 }
