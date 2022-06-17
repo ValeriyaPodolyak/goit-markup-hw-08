@@ -44,6 +44,10 @@ left: 0;
 .navigation__list {
     display: flex;
     align-items: center;
+
+    @include mq(mobile-only) {
+        display: none;
+    }
 }
 .navigation__item {
     margin-right: 50px;
@@ -57,10 +61,13 @@ left: 0;
 }
 /* Contact list style */
 .contacts {
+@include mq(mobile-only) {
+        display: none;
+    }
+
         @include mq(tablet-only) {
 margin-left: 84px;
 margin-top: 21px;
-
         }
 
     @include mq(desktop) {
@@ -115,17 +122,22 @@ line-height: 1.1;
 // Menu button
 .mobile-menu__button {
     display: inline-flex;
-    margin: 0;
+    margin-left: 276px;
     padding: 0;
     border: none;
     background-color: transparent;
-}
-.mobile-menu__button .icon-cross {
+
+& .icon-cross {
     display: none;
 }
-.mobile-menu__button.is-open .icon-cross {
+&.is-open .icon-cross {
     display: block;
 }
-.mobile-menu__button.is-open .icon-menu {
+&.is-open .icon-menu {
     display: none;
+}
+
+@include mq(tablet) {
+    display: none;
+}
 }
