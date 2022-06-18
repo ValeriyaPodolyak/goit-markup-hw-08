@@ -71,7 +71,8 @@ left: 0;
 
         @include mq(tablet-only) {
 margin-left: 84px;
-margin-top: 21px;
+margin-top: auto;
+    margin-bottom: auto;
         }
 
     @include mq(desktop) {
@@ -118,9 +119,16 @@ line-height: 1.1;
     fill: currentColor;
     margin-right: 10px;
 
-    @include mq(tablet-only) {
+&.contacts__mail {
+@include mq(tablet-only) {
         width: 14px;
         height: 10px;
+    }
+}
+
+    @include mq(tablet-only) {
+        width: 10px;
+        height: 14px;
     }
 }
 // Menu button
@@ -129,7 +137,7 @@ line-height: 1.1;
     padding: 0;
     border: none;
     background-color: transparent;
-
+z-index: 1;
 & .icon-cross {
     display: none;
 }
