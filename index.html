@@ -21,7 +21,20 @@
      <div class="container hdr__container">
         <nav class="navigation">
         <a class="navigation__company-name" href="/">Web<span class="navigation__company-name--black">Studio </span></a>
-        <button type="button" 
+        
+        <ul class="list navigation__list">
+          <li class="navigation__item">
+            <a class="link navigation__link" href="./index.html">  <span class="navigation__link--current">Студия</span> </a>
+          </li>
+          <li class="navigation__item">
+            <a class="link navigation__link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="navigation__item">
+            <a class="link navigation__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" 
         class="mobile-menu__button is-open" 
         aria-expanded="false"
         aria-controls="mobile-menu" 
@@ -35,18 +48,6 @@
           <use class="icon-menu" href="./images/sprite.svg#icon-mobile_menu_3_lines"></use>
           </svg>
         </button>
-        <ul class="list navigation__list">
-          <li class="navigation__item">
-            <a class="link navigation__link" href="./index.html">  <span class="navigation__link--current">Студия</span> </a>
-          </li>
-          <li class="navigation__item">
-            <a class="link navigation__link" href="./portfolio.html">Портфолио</a>
-          </li>
-          <li class="navigation__item">
-            <a class="link navigation__link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
       <ul class="list contacts">
         <li class="contacts__item">
           <a class="link contacts__link contacts__mail" href="mailto:info@devstudio.com" aria-label="иконка конверта">
@@ -175,14 +176,37 @@
           <h2 class="member-container__heading heading">Наша команда</h2>
         <ul class="list member__list">
           <li class="member__list-item">
+            <picture>
+                  <!-- Picture for mobile screen -->
+            <source media="(max-width: 767px)" 
+            srcset="
+            ./images/team/team_member-1_S.jpg 1x,
+            ./images/team/team_member-1_S@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Picture for tablet screen -->
+            <source media="(min-width: 768px)" 
+            srcset="
+            ./images/team/team_member-1_M.jpg 1x,
+            ./images/team/team_member-1_M@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Picture for desktop screen -->
+            <source media="(min-width: 1200px)" 
+            srcset="
+            ./images/team/team_member-1_L.jpg 1x,
+            ./images/team/team_member-1_L@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Default picture -->
             <img
               class="member__list-img img"
-              srcset="./images/team/team_member-1_S.jpg 1x, ./images/team/team_member-1_S@2x.jpg 2x"
               src="./images/team/team_member-1_S.jpg"
               alt="Игорь Демьяненко"
               width="450"
               height="460"
             />
+            </picture>
             <div class="member__group">
               <h3 class="member__group-title">Игорь Демьяненко</h3>
               <p class="member__group-position" lang="en">Product Designer</p>
@@ -223,14 +247,39 @@
             </div>
           </li>
           <li class="member__list-item">
+            <picture>
+                  <!-- Picture for mobile screen -->
+            <source media="(max-width: 767px)" 
+            srcset="
+            ./images/team/team_member-2_S.jpg 1x,
+            ./images/team/team_member-2_S@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Picture for tablet screen -->
+            <source media="(min-width: 768px)" 
+            srcset="
+            ./images/team/team_member-2_M.jpg 1x,
+            ./images/team/team_member-2_M@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Picture for desktop screen -->
+            <source media="(min-width: 1200px)" 
+            srcset="
+            ./images/team/team_member-2_L.jpg 1x,
+            ./images/team/team_member-2_L@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Default picture -->
             <img
               class="member__list-img img"
-              srcset="./images/team/team_member-2_S.jpg 1x, ./images/team/team_member-2_S@2x.jpg 2x"
-              src="./images/team/team_member-2_S.jpeg"
+              src="./images/team/team_member-2_S.jpg"
               alt="Ольга Репина"
               width="450"
               height="460"
+              loading="lazy"
+
             />
+            </picture>
             <div class="member__group">
               <h3 class="member__group-title">Ольга Репина</h3>
               <p class="member__group-position" lang="en">Frontend Developer</p>
@@ -271,14 +320,39 @@
             </div>
           </li>
           <li class="member__list-item">
+            <picture>
+                  <!-- Picture for mobile screen -->
+            <source media="(max-width: 767px)" 
+            srcset="
+            ./images/team/team_member-3_S.jpg 1x,
+            ./images/team/team_member-3_S@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Picture for tablet screen -->
+            <source media="(min-width: 768px)" 
+            srcset="
+            ./images/team/team_member-3_M.jpg 1x,
+            ./images/team/team_member-3_M@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Picture for desktop screen -->
+            <source media="(min-width: 1200px)" 
+            srcset="
+            ./images/team/team_member-3_L.jpg 1x,
+            ./images/team/team_member-3_L@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Default picture -->
             <img
               class="member__list-img img"
-               srcset="./images/team/team_member-3_S.jpg 1x, ./images/team/team_member-3_S@2x.jpg 2x"
-              src="./images/team/team_member-3_S.jpeg"
+              src="./images/team/team_member-3_S.jpg"
               alt="Николай Тарасов"
               width="450"
               height="460"
+              loading="lazy"
+
             />
+            </picture>
             <div class="member__group">
               <h3 class="member__group-title">Николай Тарасов</h3>
               <p class="member__group-position" lang="en">Marketing</p>
@@ -319,14 +393,41 @@
             </div>
           </li>
           <li class="member__list-item">
+            <picture>
+                 <!-- Picture for mobile screen -->
+            <source 
+            media="(max-width: 767px)" 
+            srcset="
+            ./images/team/team_member-4_S.jpg 1x,
+            ./images/team/team_member-4_S@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Picture for tablet screen -->
+            <source 
+            media="(min-width: 768px)" 
+            srcset="
+            ./images/team/team_member-4_M.jpg 1x,
+            ./images/team/team_member-4_M@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Picture for desktop screen -->
+            <source 
+            media="(min-width: 1200px)" 
+            srcset="
+            ./images/team/team_member-4_L.jpg 1x,
+            ./images/team/team_member-4_L@2x.jpg 2x"
+            type="image/jpg"
+            />
+            <!-- Default picture -->
             <img
              class="member__list-img img"
-                srcset="./images/team/team_member-4_S.jpg 1x, ./images/team/team_member-4_S@2x.jpg 2x"
-              src="./images/team/team_member-4_S.jpeg"
+              src="./images/team/team_member-4_S.jpg"
               alt="Михаил Ермаков"
               width="450"
               height="460"
+              loading="lazy"
             />
+            </picture>
             <div class="member__group">
               <h3 class="member__group-title">Михаил Ермаков</h3>
               <p class="member__group-position" lang="en">UI Designer</p>
@@ -496,7 +597,7 @@
      </div>
     </footer>
     <!-- Modal window -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
               <div class="modal">
 <button class="modal-button--round" type="button" data-modal-close> 
   <svg class="modal-button--round__icons" width="18" height="18">
@@ -504,7 +605,7 @@
                       </use>
                     </svg>
 </button>
-<form class="modal-form">
+<form class="modal-form"> 
    <strong class="modal-title"> Оставьте свои данные, мы вам перезвоним</strong>
   <label class="modal-form__label">
     <span class="modal-form__caption">Имя</span>
@@ -539,7 +640,7 @@
     <span class="modal-form__custom-checkbox">
       <svg class="modal-form__custom-checkbox-icon" width="16" height="15">
                       <use href="./images/sprite.svg#icon-check">
-                      </use>
+                      </use> -->
                     </svg>
     </span>
     <span class="modal-form__policy-desc">Соглашаюсь с рассылкой и принимаю 
@@ -552,7 +653,7 @@
           </button> 
 </form>
               </div>
-            </div> -->
+            </div> 
      <!-- Mobile menu -->
             <!-- <div class="mobile-menu is-open" id="mobile-menu" data-menu>
              <button class="mobile-menu__button" type="button" data-modal-close> 

@@ -21,7 +21,20 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
- width: 528px;
+
+@include mq(mobile-only) {
+   width: 92%;
+}
+
+@include mq(tablet-only) {
+   width: 450px;
+  
+}
+
+@include mq(desktop) {
+   width: 528px;
+  
+}
  padding: 40px;
 background-color: var(--white-color);
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -61,15 +74,26 @@ padding: 0;
 }
 .modal-title {
     display: block;
-    width: 448px;
 height: 23px;
 font-weight: 700;
 font-size: 20px;
-line-height: 23px;
+line-height: 30px;
+height: auto;
+
+@include mq(tablet-only) {
+width: 370px;
+    }
+
+@include mq(desktop) {
+       width: 448px;
+   line-height: 23px; 
+}
 text-align: center;
 letter-spacing: 0.03em;
 color: #212121;
-margin-bottom: 12px;
+ margin-bottom: 12px;
+ margin-left: auto;
+ margin-right: auto;
 }
 .modal-form__label {
     display: block;
@@ -129,16 +153,29 @@ transition: border 250ms var(--cubic);
 }
 &::placeholder {
 font-weight: 400;
+
+@include mq(not-desktop) {
 font-size: 14px;
 line-height: 16px;
+}
+
+@include mq(desktop) {
+font-size: 12px;
+line-height: 14px;
+}
 letter-spacing: 0.01em;
 color: rgba(117, 117, 117, 0.5);
 }
 }
 .modal-form__policy-desc {
     font-weight: 400;
+   font-size: 12px;
+line-height: 14px;
+
+    @include mq(desktop) {
 font-size: 14px;
 line-height: 24px;
+    }
 letter-spacing: 0.03em;
 color: #757575;
 
