@@ -1,7 +1,17 @@
 .filter__btn-list {
     display: flex;
+    margin-bottom: 40px;
+
+        @include mq(tablet-only) {
     justify-content: center;
+    margin-bottom: 30px;
+        }
+
+    @include mq(desktop) {
     margin-bottom: 50px;
+        justify-content: center;
+
+    }
 }
 .filter__btn-list-btn {
     color: #212121 ;  
