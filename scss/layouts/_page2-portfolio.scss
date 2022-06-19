@@ -24,10 +24,17 @@ letter-spacing: 0.03em;
 background: #FFFFFF;
 border: 1px solid #EEEEEE;
 transition: box-shadow 250ms var(--cubic);
+ width: 450px;
+height: 404px;
+
+@include mq(mobile-only) {
+&:not(:last-child) {
+ margin-bottom: 30px;
+}
+}
 
     @include mq(tablet-only) { 
         width: 354px;
-        height: 404px;
 
         &:nth-child(-n+2) {
             width: 354px;
