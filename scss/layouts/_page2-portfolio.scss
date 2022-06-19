@@ -24,8 +24,8 @@ letter-spacing: 0.03em;
 background: #FFFFFF;
 border: 1px solid #EEEEEE;
 transition: box-shadow 250ms var(--cubic);
- width: 450px;
-height: 404px;
+//  width: 450px;
+// height: 404px;
 
 @include mq(mobile-only) {
 &:not(:last-child) {
@@ -90,7 +90,16 @@ font-size: 18px;
 line-height: 28px;
 letter-spacing: 0.03em;
 color: var(--white-color);
+padding: 17% 5%;
+
+@include mq(tablet-only) {
+padding: 49px 24px 77px 24px;
+}
+
+@include mq(desktop) {
 padding: 63px 24px;
+}
+
 background-color:rgba(33, 150, 243, 0.9);
 opacity: 0;
 transform: translateY(100%);

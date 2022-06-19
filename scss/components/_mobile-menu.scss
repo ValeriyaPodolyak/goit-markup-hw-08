@@ -1,6 +1,8 @@
 // Mobile menu styles (only for mobile version)
 .mobile-menu {
     display: none;
+    z-index: 1;
+
 
 @include mq(tablet) {
  display: none;

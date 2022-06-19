@@ -326,7 +326,7 @@ h1, h2, h3, h4, h5, h6, p {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 2;
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 1000ms ease-out, visibility 1000ms ease-out;
@@ -645,6 +645,13 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 40px;
 }
 
+@media screen and (max-width: 767.98px) {
+  .filter__btn-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .filter__btn-list {
     -webkit-box-pack: center;
@@ -697,8 +704,15 @@ h1, h2, h3, h4, h5, h6, p {
   margin-right: 0;
 }
 
+@media screen and (max-width: 767.98px) {
+  .filter__btn-list-item:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
+}
+
 .mobile-menu {
   display: none;
+  z-index: 1;
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 8%;
@@ -983,7 +997,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 1;
+  z-index: 2;
 }
 
 .mobile-menu__button .icon-cross {
@@ -1720,8 +1734,6 @@ h1, h2, h3, h4, h5, h6, p {
   transition: -webkit-box-shadow 250ms var(--cubic);
   transition: box-shadow 250ms var(--cubic);
   transition: box-shadow 250ms var(--cubic), -webkit-box-shadow 250ms var(--cubic);
-  width: 450px;
-  height: 404px;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -1787,7 +1799,7 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 28px;
   letter-spacing: 0.03em;
   color: var(--white-color);
-  padding: 63px 24px;
+  padding: 17% 5%;
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
   -webkit-transform: translateY(100%);
@@ -1796,6 +1808,18 @@ h1, h2, h3, h4, h5, h6, p {
   transition: -webkit-transform 250ms var(--cubic);
   transition: transform 250ms var(--cubic);
   transition: transform 250ms var(--cubic), -webkit-transform 250ms var(--cubic);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .filter__examples-list-overlay-text {
+    padding: 49px 24px 77px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter__examples-list-overlay-text {
+    padding: 63px 24px;
+  }
 }
 
 .filter__examples-list-overlay-portfolio:hover .filter__examples-list-overlay-text,
