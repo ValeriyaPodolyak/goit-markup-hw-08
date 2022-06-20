@@ -24,8 +24,6 @@ letter-spacing: 0.03em;
 background: #FFFFFF;
 border: 1px solid #EEEEEE;
 transition: box-shadow 250ms var(--cubic);
-//  width: 450px;
-// height: 404px;
 
 @include mq(mobile-only) {
 &:not(:last-child) {
@@ -80,6 +78,10 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 .filter__examples-list-overlay {
  position: relative;
 overflow: hidden;
+
+// @include mq(mobile-only) {
+//     overflow-y: scroll;
+// }
 }
 .filter__examples-list-overlay-text {
     position: absolute;
